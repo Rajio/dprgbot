@@ -1,0 +1,29 @@
+# Python файли кешу
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Віртуальне оточення
+venv/
+env/
+ENV/
+.venv/
+
+# IDE файли (наприклад VSCode)
+.vscode/
+.idea/
+
+# Секрети та локальні змінні середовища
+.env
+.env.*
+
+# Файли OS
+.DS_Store
+Thumbs.db
+
+# Лог файли
+*.log
+
+# Тестові дані (якщо є)
+data/

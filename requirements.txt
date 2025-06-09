@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+httpx
+python-dotenv
+python-telegram-bot
+feedparser
+requests
