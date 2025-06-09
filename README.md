@@ -41,15 +41,67 @@ GROQ_API_KEY=your_groq_api_key
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 ```
 
-1️⃣ Встановіть залежності:
+Встановіть залежності:
 
 pip install -r requirements.txt
 
-2️⃣ Запустіть FastAPI сервер:
+Запустіть FastAPI сервер:
 
 uvicorn main:app --reload
 (Або з доступом через мережу: --host 0.0.0.0 --port 8000)
 
-3️⃣ Запустіть Telegram-бота:
+Запустіть Telegram-бота:
 
 python telegram_bot.py
+
+Перевірити, що Swagger доступний тут:
+
+http://127.0.0.1:8000/docs
+
+
+
+
+## Тести
+
+
+Ендпоінт: POST /episodes
+
+{
+  "title": "Building a Startup",
+  "description": "Lessons from founders on starting a tech company.",
+  "host": "Alex Smith"
+}
+
+Ендпоінт: POST /episodes/{episode_id}/generate_alternative
+
+{
+  "target": "description",
+  "prompt": "Summarize this for busy professionals."
+}
+
+Тестова команда у боті:
+
+/alt 1 title (що завгодно)
+
+
+Ендпоінт: POST /webhook/event
+
+{
+  "title": "Health Tech Innovations",
+  "description": "Interview with a digital health pioneer.",
+  "host": "Dr. Emily"
+}
+
+Ендпоінт: GET /rss     /     Можна передавати кастомний feed_url
+
+GET /rss?feed_url=https://feeds.npr.org/510289/podcast.xml
+
+Очікувана відповідь:
+
+[
+  {
+    "title": "Latest Podcast Episode",
+    "url": "https://example.com/episode1"
+  },
+  ...
+]
