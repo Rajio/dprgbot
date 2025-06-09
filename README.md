@@ -39,7 +39,7 @@
 ```env
 GROQ_API_KEY=your_groq_api_key
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-
+```
 
 1️⃣ Встановіть залежності:
 
