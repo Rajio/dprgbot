@@ -72,6 +72,9 @@ http://127.0.0.1:8000/docs
   "host": "Alex Smith"
 }
 
+![alt text](images/episodes.png)
+
+
 Ендпоінт: POST /episodes/{episode_id}/generate_alternative
 
 {
@@ -79,10 +82,13 @@ http://127.0.0.1:8000/docs
   "prompt": "Summarize this for busy professionals."
 }
 
+![alt text](images/generate_alternative.png)
+
 Тестова команда у боті:
 
 /alt 1 title (що завгодно)
 
+![alt text](images/telegram.png)
 
 Ендпоінт: POST /webhook/event
 
@@ -91,6 +97,8 @@ http://127.0.0.1:8000/docs
   "description": "Interview with a digital health pioneer.",
   "host": "Dr. Emily"
 }
+
+![alt text](images/webhook.png)
 
 Ендпоінт: GET /rss     /     Можна передавати кастомний feed_url
 
@@ -105,3 +113,5 @@ GET /rss?feed_url=https://feeds.npr.org/510289/podcast.xml
   },
   ...
 ]
+
+![alt text](images/rssr.png)
